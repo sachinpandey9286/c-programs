@@ -1,0 +1,107 @@
+#include <stdio.h>
+
+int main()
+{
+    int choice, n, i, sum;
+    int arr[100];
+
+    printf("===== C LANGUAGE PROJECT =====\n");
+    printf("1. Addition of Two Numbers\n");
+    printf("2. Check Even or Odd\n");
+    printf("3. Print Numbers using Loop\n");
+    printf("4. Find Sum of Array Elements\n");
+    printf("5. Display Array Elements\n");
+
+    printf("\nEnter your choice: ");
+    scanf("%d", &choice);
+
+    switch(choice)
+    {
+        case 1:
+        {
+            int a, b;
+
+            printf("Enter two numbers: ");
+            scanf("%d %d", &a, &b);
+
+            printf("Sum = %d\n", a + b);
+            break;
+        }
+
+        case 2:
+        {
+            int num;
+
+            printf("Enter a number: ");
+            scanf("%d", &num);
+
+            if(num % 2 == 0)
+                printf("%d is Even\n", num);
+            else
+                printf("%d is Odd\n", num);
+
+            break;
+        }
+
+        case 3:
+        {
+            printf("Enter the value of n: ");
+            scanf("%d", &n);
+
+            for(i = 1; i <= n; i++)
+            {
+                printf("%d ", i);
+            }
+
+            printf("\n");
+            break;
+        }
+
+        case 4:
+        {
+            sum = 0;
+
+            printf("Enter number of elements: ");
+            scanf("%d", &n);
+
+            printf("Enter %d elements:\n", n);
+
+            for(i = 0; i < n; i++)
+            {
+                scanf("%d", &arr[i]);
+                sum = sum + arr[i];
+            }
+
+            printf("Sum of array elements = %d\n", sum);
+            break;
+        }
+
+        case 5:
+        {
+            printf("Enter number of elements: ");
+            scanf("%d", &n);
+
+            printf("Enter %d elements:\n", n);
+
+            for(i = 0; i < n; i++)
+            {
+                scanf("%d", &arr[i]);
+            }
+
+            printf("Array elements are:\n");
+
+            for(i = 0; i < n; i++)
+            {
+                printf("%d ", arr[i]);
+            }
+
+            printf("\n");
+            break;
+        }
+
+        default:
+            printf("Invalid choice!\n");
+    }
+
+    return 0;
+}
